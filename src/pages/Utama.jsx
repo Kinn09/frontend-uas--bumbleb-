@@ -6,7 +6,7 @@ const Utama = () => {
     const [utama, setUtama] = useState([]);
 
     const getUtama = async () => {
-        const response = await axios.get("http://localhost:5000/tempats");
+        const response = await axios.get("http://localhost:5000/lokasis");
         setUtama(response.data);
         console.log(utama);
     }

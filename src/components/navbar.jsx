@@ -15,7 +15,7 @@ const Navbar = () => {
                 <nav className='hidden sm:block justify-between text-white ml-40 lg:ml-60 px-1 py-1'>
                     <ul className='flex ml-24 lg:ml-32 space-x-10 lg:space-x-16 '>
                         <li><Link to={'/'}>Home</Link></li>
-                        <li><Link to={'/detail1'}>Wisata</Link></li>
+                        <li><Link to={'/detail1'}>About</Link></li>
                     </ul>
                 </nav>
             </div>
