@@ -1,5 +1,6 @@
 import React from 'react'
 import Nav from '../assets/menu.png'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     return (
@@ -13,9 +14,8 @@ const Navbar = () => {
                 </div>
                 <nav className='hidden sm:block justify-between text-white ml-40 lg:ml-60 px-1 py-1'>
                     <ul className='flex ml-24 lg:ml-32 space-x-10 lg:space-x-16 '>
-                        <li><a href="#"></a> Home</li>
-                        <li><a href="#"></a> Wisata</li>
-                        <li><a href="#"></a> Favorites</li>
+                        <li><Link to={'/'}>Home</Link></li>
+                        <li><Link to={'/detail1'}>Wisata</Link></li>
                     </ul>
                 </nav>
             </div>
