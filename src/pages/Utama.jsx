@@ -8,17 +8,15 @@ const Utama = () => {
     const getUtama = async () => {
         const response = await axios.get("http://localhost:5000/lokasis");
         setUtama(response.data);
-        console.log(utama);
+        console.log(response.data);
     }
-
 
     useEffect(() => {
         getUtama();
     }, []);
 
     return (
-
-        <div className='grid grid-cols-1 md:grid-cols-3'>
+        <div className='grid grid-cols-1 md:grid-cols-3 w-max mx-auto items-center space-y-3 space-x-6'>
             {
                 utama.map((item) => (
                     <Wisata
@@ -26,34 +24,12 @@ const Utama = () => {
                         nama={item.nama}
                         alamat={item.alamat}
                         deskripsi={item.deskripsi}
+                        id={item.id}
                     />
                 ))
             }
         </div>
     )
 }
-
-// const Utama = () => {
-//     return (
-//         <div className=''>
-//             <div className='md:flex'>
-//                 <Wisata />
-//                 <Wisata />
-//                 <Wisata />
-//             </div>
-//             <div className='md:flex'>
-//                 <Wisata />
-//                 <Wisata />
-//                 <Wisata />
-//             </div>
-//             <div className='md:flex'>
-//                 <Wisata />
-//                 <Wisata />
-//                 <Wisata />
-//             </div>
-//         </div>
-
-//     )
-// }
 
 export default Utama;
